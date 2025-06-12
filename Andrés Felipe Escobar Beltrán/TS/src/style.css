@@ -1,0 +1,110 @@
+/* Estilo principal */
+html, body, .darkbody {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #000000;
+  overflow-x: hidden; /* Previene scroll horizontal innecesario */
+}
+
+/* Encabezados */
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+h2 {
+  margin-top: 30px;
+  color: #444;
+}
+
+/* Contenedor flexible */
+.container {
+  display: flex;
+  background-color: #f4f4f4;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-left: 220px; /* Deja espacio para el sidebar fijo */
+}
+
+/* Barra lateral completamente fija */
+.sidebar {
+  width: 220px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: linear-gradient(180deg, #022201, #022201);
+  padding: 10px 5px;
+  color: white;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  z-index: 1000;
+}
+
+/* Lista de navegación */
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Elementos de la lista */
+.sidebar li {
+  margin: 10px 0;
+}
+
+/* Enlaces del menú */
+.sidebar a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 16px;
+  padding: 10px 15px;
+  display: block;
+  border-radius: 8px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+/* Efecto hover */
+.sidebar a:hover {
+  background-color: #333333;
+  transform: translateX(5px);
+}
+
+/* Contenido principal */
+.content {
+  flex: 1;
+  padding: 20px;
+}
+
+/* Formularios */
+input {
+  padding: 8px;
+  margin: 5px 5px 15px 0;
+  width: 60%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  padding: 8px 14px;
+  background-color: #022201;
+  border: none;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #022201;
+}
+
+/* Resultados */
+#resultado {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #eef;
+  border-radius: 8px;
+}

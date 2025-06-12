@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Documentación de Endpoints - Sensores</title>
+    <link rel="stylesheet" href="estilos.css" />
+  </head>
+
+  <body>
+    <h1 class="title">Documentación CRUD</h1>
+
+    <h1>Documentación del Endpoint de Lotes</h1>
+
+    <h2>1. Registrar Lote</h2>
+    <table>
+      <tr>
+        <th>Método</th>
+        <td>POST</td>
+      </tr>
+      <tr>
+        <th>URL</th>
+        <td>http://localhost:3000/lote/registrar</td>
+      </tr>
+      <tr>
+        <th>JSON</th>
+        <td>
+          <pre>
+{
+  "area_lote": 400
+}</pre
+          >
+        </td>
+      </tr>
+    </table>
+
+    <h2>2. Listar Lotes</h2>
+    <table>
+      <tr>
+        <th>Método</th>
+        <td>GET</td>
+      </tr>
+      <tr>
+        <th>URL</th>
+        <td>http://localhost:3000/lote/listar</td>
+      </tr>
+    </table>
+
+    <h2>3. Buscar Lote por ID</h2>
+    <table>
+      <tr>
+        <th>Método</th>
+        <td>GET</td>
+      </tr>
+      <tr>
+        <th>URL</th>
+        <td>http://localhost:3000/lote/buscar/1</td>
+      </tr>
+    </table>
+
+    <h2>4. Actualizar Lote</h2>
+    <table>
+      <tr>
+        <th>Método</th>
+        <td>PUT</td>
+      </tr>
+      <tr>
+        <th>URL</th>
+        <td>http://localhost:3000/lote/actualizar/1</td>
+      </tr>
+      <tr>
+        <th>JSON</th>
+        <td>
+          <pre>
+{
+  "area_lote": 500
+}</pre
+          >
+        </td>
+      </tr>
+    </table>
+
+    <h2>5. Eliminar Lote</h2>
+    <table>
+      <tr>
+        <th>Método</th>
+        <td>DELETE</td>
+      </tr>
+      <tr>
+        <th>URL</th>
+        <td>http://localhost:3000/lote/eliminar/1</td>
+      </tr>
+    </table>
+
+    <hr />
+
+    <h1>Documentación del Endpoint de Sublotes</h1>
+
+    <h2>1. Registrar Sublote</h2>
+    <table>
+      <tr>
+        <th>Método</th>
+        <td>POST</td>
+      </tr>
+      <tr>
+        <th>URL</th>
+        <td>http://localhost:3000/sublote/registrar</td>
+      </tr>
+      <tr>
+        <th>JSON</th>
+        <td>
+          <pre>
+{
+  "longitud_sublote": 74.123456,
+  "latitud_sublote": 4.567890,
+  "nombre_sublote": "Sublote Norte",
+  "descripcion_sublote": "Área de cultivo con riego por goteo",
+  "id_lote_fk": 2
+}</pre
+          >
+        </td>
+      </tr>
+    </table>
+
+    <h2>2. Listar Sublotes</h2>
+    <table>
+      <tr>
+        <th>Método</th>
+        <td>GET</td>
+      </tr>
+      <tr>
+        <th>URL</th>
+        <td>http://localhost:3000/sublote/listar</td>
+      </tr>
+    </table>
+
+    <h2>3. Buscar Sublote por ID</h2>
+    <table>
+      <tr>
+        <th>Método</th>
+        <td>GET</td>
+      </tr>
+      <tr>
+        <th>URL</th>
+        <td>http://localhost:3000/sublote/buscar/2</td>
+      </tr>
+    </table>
+
+    <h2>4. Actualizar Sublote</h2>
+    <table>
+      <tr>
+        <th>Método</th>
+        <td>PUT</td>
+      </tr>
+      <tr>
+        <th>URL</th>
+        <td>http://localhost:3000/sublote/actualizar/2</td>
+      </tr>
+      <tr>
+        <th>JSON</th>
+        <td>
+          <pre>
+{
+  "longitud_sublote": 74.987654,
+  "latitud_sublote": 4.321098,
+  "nombre_sublote": "Sublote Norte Actualizado",
+  "descripcion_sublote": "Área renovada con nuevas plantas",
+  "id_lote_fk": 2
+}</pre
+          >
+        </td>
+      </tr>
+    </table>
+
+    <h2>5. Eliminar Sublote</h2>
+    <table>
+      <tr>
+        <th>Método</th>
+        <td>DELETE</td>
+      </tr>
+      <tr>
+        <th>URL</th>
+        <td>http://localhost:3000/sublote/eliminar/3</td>
+      </tr>
+    </table>
+
+    <hr />
+
+    <h1>Documentación del Endpoint de Tipos de Cultivos</h1>
+
+    <h2>1. Registrar Tipo Cultivo</h2>
+    <table>
+      <tr>
+        <th>Método</th>
+        <td>POST</td>
+      </tr>
+      <tr>
+        <th>URL</th>
+        <td>http://localhost:3000/tipoCultivo/registrartipocultivo</td>
+      </tr>
+      <tr>
+        <th>JSON</th>
+        <td>
+          <pre>
+{
+  "nombre_tipo_cultivo": "platano"
+}</pre
+          >
+        </td>
+      </tr>
+    </table>
+
+    <h2>2. Listar Tipos de Cultivos</h2>
+    <table>
+      <tr>
+        <th>Método</th>
+        <td>GET</td>
+      </tr>
+      <tr>
+        <th>URL</th>
+        <td>http://localhost:3000/tipoCultivo/listartipocultivos</td>
+      </tr>
+    </table>
+
+    <h2>3. Buscar Tipo Cultivo por ID</h2>
+    <table>
+      <tr>
+        <th>Método</th>
+        <td>GET</td>
+      </tr>
+      <tr>
+        <th>URL</th>
+        <td>http://localhost:3000/tipoCultivo/buscartipocultivo/1</td>
+      </tr>
+    </table>
+
+    <h2>4. Actualizar Tipo Cultivo</h2>
+    <table>
+      <tr>
+        <th>Método</th>
+        <td>PUT</td>
+      </tr>
+      <tr>
+        <th>URL</th>
+        <td>http://localhost:3000/tipoCultivo/actualizartipocultivo/1</td>
+      </tr>
+      <tr>
+        <th>JSON</th>
+        <td>
+          <pre>
+{
+  "nombre_tipo_cultivo": "cacao"
+}</pre
+          >
+        </td>
+      </tr>
+    </table>
+
+    <h2>5. Eliminar Tipo Cultivo</h2>
+    <table>
+      <tr>
+        <th>Método</th>
+        <td>DELETE</td>
+      </tr>
+      <tr>
+        <th>URL</th>
+        <td>http://localhost:3000/tipoCultivo/eliminartipocultivo/1</td>
+      </tr>
+    </table>
+
+    <hr />
+
+    <h1>Documentación del Endpoint de Cultivos</h1>
+
+    <h2>1. Registrar Cultivo</h2>
+    <table>
+      <tr>
+        <th>Método</th>
+        <td>POST</td>
+      </tr>
+      <tr>
+        <th>URL</th>
+        <td>http://localhost:3000/cultivo/registrarcultivo</td>
+      </tr>
+      <tr>
+        <th>JSON</th>
+        <td>
+          <pre>
+{
+  "descripcion_cultivo": "Cultivo de plátano orgánico en zona húmeda",
+  "precio_cultivo": 12500,
+  "presentacion_cultivo": "Caja de 20 kg",
+  "fecha_inicio_cultivo": "2025-04-01",
+  "fecha_fin_cultivo": "2025-08-15",
+  "id_sublote_fk": 2,
+  "id_tipo_cultivo_fk": 1
+}</pre
+          >
+        </td>
+      </tr>
+    </table>
+
+    <h2>2. Listar Cultivos</h2>
+    <table>
+      <tr>
+        <th>Método</th>
+        <td>GET</td>
+      </tr>
+      <tr>
+        <th>URL</th>
+        <td>http://localhost:3000/cultivo/listarcultivos</td>
+      </tr>
+    </table>
+
+    <h2>3. Buscar Cultivo por ID</h2>
+    <table>
+      <tr>
+        <th>Método</th>
+        <td>GET</td>
+      </tr>
+      <tr>
+        <th>URL</th>
+        <td>http://localhost:3000/cultivo/buscarcultivo/3</td>
+      </tr>
+    </table>
+
+    <h2>4. Actualizar Cultivo</h2>
+    <table>
+      <tr>
+        <th>Método</th>
+        <td>PUT</td>
+      </tr>
+      <tr>
+        <th>URL</th>
+        <td>http://localhost:3000/cultivo/actualizarcultivo/3</td>
+      </tr>
+      <tr>
+        <th>JSON</th>
+        <td>
+          <pre>
+{
+  "descripcion_cultivo": "Cultivo de plátano orgánico en zona húmeda actualizado",
+  "precio_cultivo": 20000,
+  "presentacion_cultivo": "Caja de 20 kg",
+  "fecha_inicio_cultivo": "2025-04-01",
+  "fecha_fin_cultivo": "2025-08-15",
+  "id_sublote_fk": 2,
+  "id_tipo_cultivo_fk": 1
+}</pre
+          >
+        </td>
+      </tr>
+    </table>
+
+    <h2>5. Eliminar Cultivo</h2>
+    <table>
+      <tr>
+        <th>Método</th>
+        <td>DELETE</td>
+      </tr>
+      <tr>
+        <th>URL</th>
+        <td>http://localhost:3000/cultivo/eliminarcultivo/3</td>
+      </tr>
+    </table>
+
+    <h1>Documentación del Endpoint de Roles</h1>
+
+    <h2>1. Listar Roles</h2>
+    <table>
+      <tr>
+        <th>URL</th>
+        <td>GET http://localhost:3000/rol/listarrol</td>
+      </tr>
+      <tr>
+        <th>Descripción</th>
+        <td>Lista todos los roles disponibles.</td>
+      </tr>
+    </table>
+
+    <h2>2. Buscar Rol</h2>
+    <table>
+      <tr>
+        <th>URL</th>
+        <td>GET http://localhost:3000/rol/buscarrol/1</td>
+      </tr>
+      <tr>
+        <th>Descripción</th>
+        <td>Busca un rol específico por ID.</td>
+      </tr>
+    </table>
+
+    <h2>3. Registrar Rol</h2>
+    <table>
+      <tr>
+        <th>URL</th>
+        <td>POST http://localhost:3000/rol/registrarrol</td>
+      </tr>
+      <tr>
+        <th>Descripción</th>
+        <td>Registra un nuevo rol en la base de datos.</td>
+      </tr>
+      <tr>
+        <th>Parámetros</th>
+        <td>
+          <pre>
+{
+      "id_rol_pk": 2,
+      "nombre_rol": "Aprendiz"
+    }</pre
+          >
+        </td>
+      </tr>
+    </table>
+
+    <h2>4. Actualizar Rol</h2>
+    <table>
+      <tr>
+        <th>URL</th>
+        <td>PUT http://localhost:3000/rol/actualizarrol/2</td>
+      </tr>
+      <tr>
+        <th>Descripción</th>
+        <td>Actualiza un rol existente por ID.</td>
+      </tr>
+    </table>
+
+    <h2>5. Eliminar Rol</h2>
+    <table>
+      <tr>
+        <th>URL</th>
+        <td>DELETE http://localhost:3000/rol/eliminarrol/2</td>
+      </tr>
+      <tr>
+        <th>Descripción</th>
+        <td>Elimina un rol específico por ID.</td>
+      </tr>
+    </table>
+
+    <h1>Documentación del Endpoint de Usuarios</h1>
+
+    <h2>1. Listar Usuarios</h2>
+    <table>
+      <tr>
+        <th>URL</th>
+        <td>GET http://localhost:3000/usuario/listarusuario</td>
+      </tr>
+      <tr>
+        <th>Descripción</th>
+        <td>Lista todos los usuarios registrados.</td>
+      </tr>
+    </table>
+
+    <h2>2. Buscar Usuario</h2>
+    <table>
+      <tr>
+        <th>URL</th>
+        <td>GET http://localhost:3000/usuario/buscarusuario/1</td>
+      </tr>
+      <tr>
+        <th>Descripción</th>
+        <td>Busca un usuario por su DNI.</td>
+      </tr>
+    </table>
+
+    <h2>3. Registrar Usuario</h2>
+    <table>
+      <tr>
+        <th>URL</th>
+        <td>POST http://localhost:3000/usuario/registrarusuario</td>
+      </tr>
+      <tr>
+        <th>Descripción</th>
+        <td>Registra un nuevo usuario.</td>
+      </tr>
+      <tr>
+        <th>Parámetros</th>
+        <td>
+          <pre>
+{
+      "dni_usuario_pk": 1,
+      "nombre_usuario": "pablo",
+      "apellido_usuario": "martinez",
+      "telefono_usuario": "1233565",
+      "correo_usuario": "sdsfe@gmail.com",
+      "contraseña_usuario": "5454",
+      "estado_usuario": "activo",
+      "id_rol": 1
+    }</pre
+          >
+        </td>
+      </tr>
+    </table>
+
+    <h2>4. Actualizar Usuario</h2>
+    <table>
+      <tr>
+        <th>URL</th>
+        <td>PUT http://localhost:3000/usuario/actualizarusuario/1</td>
+      </tr>
+      <tr>
+        <th>Descripción</th>
+        <td>Actualiza un usuario existente.</td>
+      </tr>
+    </table>
+
+    <h2>5. Eliminar Usuario</h2>
+    <table>
+      <tr>
+        <th>URL</th>
+        <td>DELETE http://localhost:3000/usuario/eliminarusuario/2</td>
+      </tr>
+      <tr>
+        <th>Descripción</th>
+        <td>Elimina un usuario por su DNI.</td>
+      </tr>
+    </table>
+
+    <h1>Documentación del Endpoint de Usuario Actividad</h1>
+
+    <h2>1. Listar Usuario Actividad</h2>
+    <table>
+      <tr>
+        <th>URL</th>
+        <td>GET http://localhost:3000/usuarioActividad/listar</td>
+      </tr>
+      <tr>
+        <th>Descripción</th>
+        <td>Lista todos los registros de usuarios con sus actividades.</td>
+      </tr>
+    </table>
+
+    <h2>2. Buscar Usuario Actividad</h2>
+    <table>
+      <tr>
+        <th>URL</th>
+        <td>GET http://localhost:3000/usuarioActividad/buscar/1</td>
+      </tr>
+      <tr>
+        <th>Descripción</th>
+        <td>Busca un registro de actividad por ID.</td>
+      </tr>
+    </table>
+
+    <h2>3. Registrar Usuario Actividad</h2>
+    <table>
+      <tr>
+        <th>URL</th>
+        <td>POST http://localhost:3000/usuarioActividad/registrar</td>
+      </tr>
+      <tr>
+        <th>Descripción</th>
+        <td>Asocia un usuario con una actividad.</td>
+      </tr>
+      <tr>
+        <th>Parámetros</th>
+        <td>
+          <pre>
+{
+      "id_usuarios_actividades_pk": 1,
+      "dni_usuario": 1,
+      "id_actividad": "1"
+    }</pre
+          >
+        </td>
+      </tr>
+    </table>
+
+    <h2>4. Actualizar Usuario Actividad</h2>
+    <table>
+      <tr>
+        <th>URL</th>
+        <td>PUT http://localhost:3000/usuarioActividad/actualizar/1</td>
+      </tr>
+      <tr>
+        <th>Descripción</th>
+        <td>Actualiza la relación entre usuario y actividad.</td>
+      </tr>
+    </table>
+
+    <h2>5. Eliminar Usuario Actividad</h2>
+    <table>
+      <tr>
+        <th>URL</th>
+        <td>DELETE http://localhost:3000/usuarioActividad/eliminar/1</td>
+      </tr>
+      <tr>
+        <th>Descripción</th>
+        <td>Elimina un registro de usuario-actividad.</td>
+      </tr>
+    </table>
+
+    <h1>Documentación del Endpoint de Sensores</h1>
+    <p>Esta es la documentación del endpoint con los CRUD de Sensores.</p>
+
+    <h2>1. Registrar Sensor</h2>
+    <table>
+      <tr>
+        <th>URL</th>
+        <td>POST /sensores</td>
+      </tr>
+      <tr>
+        <th>Descripción</th>
+        <td>Permite registrar un nuevo sensor en la base de datos.</td>
+      </tr>
+      <tr>
+        <th>HTTP</th>
+        <td>POST</td>
+      </tr>
+      <tr>
+        <th>Parámetros</th>
+        <td>
+          <pre>
+{
+  "nombre": "Sensor de humedad",
+  "id_cultivo_fk": 1,
+  "id_tipo_sensor_fk": 2,
+  "fecha_inicio": "2025-05-01",
+  "fecha_fin": "2025-06-01"
+}</pre
+          >
+        </td>
+      </tr>
+      <tr>
+        <th>Headers</th>
+        <td>Autorización por JsonWebToken con Bearer</td>
+      </tr>
+      <tr>
+        <th>Usuario</th>
+        <td>Administrador</td>
+      </tr>
+    </table>
+
+    <h2>2. Listar Sensores</h2>
+    <table>
+      <tr>
+        <th>URL</th>
+        <td>GET /sensores</td>
+      </tr>
+      <tr>
+        <th>Descripción</th>
+        <td>Lista todos los sensores en la base de datos.</td>
+      </tr>
+      <tr>
+        <th>HTTP</th>
+        <td>GET</td>
+      </tr>
+      <tr>
+        <th>Headers</th>
+        <td>Autenticación con JsonWebToken</td>
+      </tr>
+      <tr>
+        <th>Usuario</th>
+        <td>Administrador</td>
+      </tr>
+    </table>
+
+    <h2>3. Obtener Sensor</h2>
+    <table>
+      <tr>
+        <th>URL</th>
+        <td>GET /sensores/:id</td>
+      </tr>
+      <tr>
+        <th>Descripción</th>
+        <td>Obtiene un sensor específico según su ID.</td>
+      </tr>
+      <tr>
+        <th>HTTP</th>
+        <td>GET</td>
+      </tr>
+      <tr>
+        <th>Headers</th>
+        <td>JsonWebToken</td>
+      </tr>
+      <tr>
+        <th>Usuario</th>
+        <td>Administrador</td>
+      </tr>
+    </table>
+
+    <h2>4. Actualizar Sensor</h2>
+    <table>
+      <tr>
+        <th>URL</th>
+        <td>PUT /sensores/:id</td>
+      </tr>
+      <tr>
+        <th>Descripción</th>
+        <td>Actualiza un sensor específico por ID.</td>
+      </tr>
+      <tr>
+        <th>HTTP</th>
+        <td>PUT</td>
+      </tr>
+      <tr>
+        <th>Parámetros</th>
+        <td>
+          <pre>
+{
+  "nombre": "Sensor modificado",
+  "id_cultivo_fk": 2,
+  "id_tipo_sensor_fk": 3,
+  "fecha_inicio": "2025-05-02",
+  "fecha_fin": "2025-06-15"
+}</pre
+          >
+        </td>
+      </tr>
+      <tr>
+        <th>Headers</th>
+        <td>JsonWebToken</td>
+      </tr>
+      <tr>
+        <th>Usuario</th>
+        <td>Administrador</td>
+      </tr>
+    </table>
+
+    <h2>5. Eliminar Sensor</h2>
+    <table>
+      <tr>
+        <th>URL</th>
+        <td>DELETE /sensores/:id</td>
+      </tr>
+      <tr>
+        <th>Descripción</th>
+        <td>Elimina un sensor específico por su ID.</td>
+      </tr>
+      <tr>
+        <th>HTTP</th>
+        <td>DELETE</td>
+      </tr>
+      <tr>
+        <th>Headers</th>
+        <td>JsonWebToken</td>
+      </tr>
+      <tr>
+        <th>Usuario</th>
+        <td>Administrador</td>
+      </tr>
+    </table>
+
+    <h1>Documentación del Endpoint de Tipo de Sensores</h1>
+    <p>CRUD de los tipos de sensores.</p>
+
+    <h2>1. Registrar Tipo Sensor</h2>
+    <table>
+      <tr>
+        <th>URL</th>
+        <td>POST /tipo_sensores</td>
+      </tr>
+      <tr>
+        <th>Descripción</th>
+        <td>Registra un nuevo tipo de sensor.</td>
+      </tr>
+      <tr>
+        <th>HTTP</th>
+        <td>POST</td>
+      </tr>
+      <tr>
+        <th>Parámetros</th>
+        <td>
+          <pre>
+{
+  "nombre_tipo_sensor": "Temperatura"
+}</pre
+          >
+        </td>
+      </tr>
+      <tr>
+        <th>Headers</th>
+        <td>JsonWebToken</td>
+      </tr>
+      <tr>
+        <th>Usuario</th>
+        <td>Administrador</td>
+      </tr>
+    </table>
+
+    <h2>2. Listar Tipos Sensor</h2>
+    <table>
+      <tr>
+        <th>URL</th>
+        <td>GET /tipo_sensores</td>
+      </tr>
+      <tr>
+        <th>Descripción</th>
+        <td>Lista todos los tipos de sensores existentes.</td>
+      </tr>
+      <tr>
+        <th>HTTP</th>
+        <td>GET</td>
+      </tr>
+      <tr>
+        <th>Headers</th>
+        <td>JsonWebToken</td>
+      </tr>
+      <tr>
+        <th>Usuario</th>
+        <td>Administrador</td>
+      </tr>
+    </table>
+
+    <h2>3. Actualizar Tipo Sensor</h2>
+    <table>
+      <tr>
+        <th>URL</th>
+        <td>PUT /tipo_sensores/:id</td>
+      </tr>
+      <tr>
+        <th>Descripción</th>
+        <td>Modifica el nombre del tipo de sensor.</td>
+      </tr>
+      <tr>
+        <th>HTTP</th>
+        <td>PUT</td>
+      </tr>
+      <tr>
+        <th>Parámetros</th>
+        <td>
+          <pre>
+{
+  "nombre_tipo_sensor": "Presión"
+}</pre
+          >
+        </td>
+      </tr>
+      <tr>
+        <th>Headers</th>
+        <td>JsonWebToken</td>
+      </tr>
+      <tr>
+        <th>Usuario</th>
+        <td>Administrador</td>
+      </tr>
+    </table>
+
+    <h2>4. Eliminar Tipo Sensor</h2>
+    <table>
+      <tr>
+        <th>URL</th>
+        <td>DELETE /tipo_sensores/:id</td>
+      </tr>
+      <tr>
+        <th>Descripción</th>
+        <td>Elimina un tipo de sensor específico por ID.</td>
+      </tr>
+      <tr>
+        <th>HTTP</th>
+        <td>DELETE</td>
+      </tr>
+      <tr>
+        <th>Headers</th>
+        <td>JsonWebToken</td>
+      </tr>
+      <tr>
+        <th>Usuario</th>
+        <td>Administrador</td>
+      </tr>
+    </table>
+  </body>
+</html>
